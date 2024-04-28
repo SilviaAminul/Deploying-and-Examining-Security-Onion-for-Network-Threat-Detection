@@ -1,0 +1,417 @@
+{
+  "_index": "securityonion:so-ossec-2023.04.26",
+  "_id": "Llrkv4cBiUEzU_FXTGa8",
+  "_version": 1,
+  "_score": 0,
+  "_source": {
+    "agent": {
+      "ip": "10.0.2.0",
+      "name": "securityonion",
+      "id": "001"
+    },
+    "process": {
+      "name": "sshd"
+    },
+    "manager": {
+      "name": "securityonion-wazuh-manager"
+    },
+    "log": {
+      "file": {
+        "path": "/wazuh/archives/archives.json"
+      },
+      "offset": 9197089,
+      "location": "/var/log/secure",
+      "id": {
+        "id": "1682551614.66293"
+      },
+      "full": "Apr 26 23:26:53 securityonion sshd[25319]: Did not receive identification string from 10.0.2.20 port 38990"
+    },
+    "rule": {
+      "mail": false,
+      "level": 6,
+      "pci_dss": [
+        "11.4"
+      ],
+      "tsc": [
+        "CC6.1",
+        "CC6.8",
+        "CC7.2",
+        "CC7.3"
+      ],
+      "groups": [
+        "syslog",
+        "sshd",
+        "recon"
+      ],
+      "nist_800_53": [
+        "SI.4"
+      ],
+      "uuid": "5706",
+      "gdpr": [
+        "IV_35.7.d"
+      ],
+      "firedtimes": 1,
+      "name": "sshd: insecure connection attempt (scan).",
+      "mitre": {
+        "technique": [
+          "Commonly Used Port"
+        ],
+        "id": [
+          "T1043"
+        ],
+        "tactic": [
+          "Command and Control"
+        ]
+      },
+      "category": "Low relevance attack",
+      "gpg13": [
+        "4.12"
+      ]
+    },
+    "decoder": {
+      "parent": "sshd"
+    },
+    "source": {
+      "ip": "10.0.2.20"
+    },
+    "message": "{\"timestamp\":\"2023-04-26T23:26:54.416+0000\",\"rule\":{\"level\":6,\"description\":\"sshd: insecure connection attempt (scan).\",\"id\":\"5706\",\"mitre\":{\"id\":[\"T1043\"],\"tactic\":[\"Command and Control\"],\"technique\":[\"Commonly Used Port\"]},\"firedtimes\":1,\"mail\":false,\"groups\":[\"syslog\",\"sshd\",\"recon\"],\"pci_dss\":[\"11.4\"],\"gpg13\":[\"4.12\"],\"gdpr\":[\"IV_35.7.d\"],\"nist_800_53\":[\"SI.4\"],\"tsc\":[\"CC6.1\",\"CC6.8\",\"CC7.2\",\"CC7.3\"]},\"agent\":{\"id\":\"001\",\"name\":\"securityonion\",\"ip\":\"10.0.2.0\"},\"manager\":{\"name\":\"securityonion-wazuh-manager\"},\"id\":\"1682551614.66293\",\"full_log\":\"Apr 26 23:26:53 securityonion sshd[25319]: Did not receive identification string from 10.0.2.20 port 38990\",\"predecoder\":{\"program_name\":\"sshd\",\"timestamp\":\"Apr 26 23:26:53\",\"hostname\":\"securityonion\"},\"decoder\":{\"parent\":\"sshd\",\"name\":\"sshd\"},\"data\":{\"srcip\":\"10.0.2.20\",\"srcport\":\"38990\"},\"location\":\"/var/log/secure\"}",
+    "@timestamp": "2023-04-26T23:27:01.377Z",
+    "ecs": {
+      "version": "8.0.0"
+    },
+    "host": {
+      "name": "securityonion"
+    },
+    "wazuh": {
+      "data": {
+        "srcport": "38990"
+      }
+    },
+    "event": {
+      "severity": 1,
+      "code": "",
+      "module": "ossec",
+      "category": "host",
+      "dataset": "alert",
+      "severity_label": "low",
+      "timestamp": "2023-04-26T23:26:54.416+0000"
+    }
+  },
+  "fields": {
+    "event.category": [
+      "host"
+    ],
+    "host.name.keyword": [
+      "securityonion"
+    ],
+    "rule.nist_800_53": [
+      "SI.4"
+    ],
+    "event.dataset.keyword": [
+      "alert"
+    ],
+    "event.severity_label.security": [
+      "low"
+    ],
+    "rule.gdpr.keyword": [
+      "IV_35.7.d"
+    ],
+    "rule.mitre.id": [
+      "T1043"
+    ],
+    "message.security": [
+      "{\"timestamp\":\"2023-04-26T23:26:54.416+0000\",\"rule\":{\"level\":6,\"description\":\"sshd: insecure connection attempt (scan).\",\"id\":\"5706\",\"mitre\":{\"id\":[\"T1043\"],\"tactic\":[\"Command and Control\"],\"technique\":[\"Commonly Used Port\"]},\"firedtimes\":1,\"mail\":false,\"groups\":[\"syslog\",\"sshd\",\"recon\"],\"pci_dss\":[\"11.4\"],\"gpg13\":[\"4.12\"],\"gdpr\":[\"IV_35.7.d\"],\"nist_800_53\":[\"SI.4\"],\"tsc\":[\"CC6.1\",\"CC6.8\",\"CC7.2\",\"CC7.3\"]},\"agent\":{\"id\":\"001\",\"name\":\"securityonion\",\"ip\":\"10.0.2.0\"},\"manager\":{\"name\":\"securityonion-wazuh-manager\"},\"id\":\"1682551614.66293\",\"full_log\":\"Apr 26 23:26:53 securityonion sshd[25319]: Did not receive identification string from 10.0.2.20 port 38990\",\"predecoder\":{\"program_name\":\"sshd\",\"timestamp\":\"Apr 26 23:26:53\",\"hostname\":\"securityonion\"},\"decoder\":{\"parent\":\"sshd\",\"name\":\"sshd\"},\"data\":{\"srcip\":\"10.0.2.20\",\"srcport\":\"38990\"},\"location\":\"/var/log/secure\"}"
+    ],
+    "decoder.parent.security": [
+      "sshd"
+    ],
+    "process.name.security": [
+      "sshd"
+    ],
+    "agent.name.security": [
+      "securityonion"
+    ],
+    "wazuh.data.srcport.security": [
+      "38990"
+    ],
+    "source.ip": [
+      "10.0.2.20"
+    ],
+    "rule.groups.keyword": [
+      "syslog",
+      "sshd",
+      "recon"
+    ],
+    "agent.name": [
+      "securityonion"
+    ],
+    "rule.gpg13.security": [
+      "4.12"
+    ],
+    "agent.ip": [
+      "10.0.2.0"
+    ],
+    "rule.name.keyword": [
+      "sshd: insecure connection attempt (scan)."
+    ],
+    "event.severity": [
+      1
+    ],
+    "rule.mitre.technique": [
+      "Commonly Used Port"
+    ],
+    "wazuh.data.srcport.keyword": [
+      "38990"
+    ],
+    "rule.mitre.id.security": [
+      "T1043"
+    ],
+    "agent.id.keyword": [
+      "001"
+    ],
+    "event.timestamp": [
+      "2023-04-26T23:26:54.416+0000"
+    ],
+    "log.id.id": [
+      "1682551614.66293"
+    ],
+    "event.code": [
+      ""
+    ],
+    "agent.id": [
+      "001"
+    ],
+    "log.location.security": [
+      "/var/log/secure"
+    ],
+    "agent.ip.keyword": [
+      "10.0.2.0"
+    ],
+    "rule.mitre.tactic.keyword": [
+      "Command and Control"
+    ],
+    "rule.nist_800_53.keyword": [
+      "SI.4"
+    ],
+    "event.category.security": [
+      "host"
+    ],
+    "log.full.security": [
+      "Apr 26 23:26:53 securityonion sshd[25319]: Did not receive identification string from 10.0.2.20 port 38990"
+    ],
+    "rule.gpg13.keyword": [
+      "4.12"
+    ],
+    "manager.name": [
+      "securityonion-wazuh-manager"
+    ],
+    "rule.pci_dss": [
+      "11.4"
+    ],
+    "log.location": [
+      "/var/log/secure"
+    ],
+    "rule.uuid.security": [
+      "5706"
+    ],
+    "wazuh.data.srcport": [
+      "38990"
+    ],
+    "decoder.parent.keyword": [
+      "sshd"
+    ],
+    "ecs.version.security": [
+      "8.0.0"
+    ],
+    "agent.name.keyword": [
+      "securityonion"
+    ],
+    "manager.name.keyword": [
+      "securityonion-wazuh-manager"
+    ],
+    "rule.mitre.tactic": [
+      "Command and Control"
+    ],
+    "@timestamp": [
+      "2023-04-26T23:27:01.377Z"
+    ],
+    "log.full.keyword": [
+      "Apr 26 23:26:53 securityonion sshd[25319]: Did not receive identification string from 10.0.2.20 port 38990"
+    ],
+    "rule.mitre.technique.security": [
+      "Commonly Used Port"
+    ],
+    "rule.gdpr.security": [
+      "IV_35.7.d"
+    ],
+    "log.file.path": [
+      "/wazuh/archives/archives.json"
+    ],
+    "rule.firedtimes": [
+      1
+    ],
+    "rule.level": [
+      6
+    ],
+    "event.module.security": [
+      "ossec"
+    ],
+    "event.code.security": [
+      ""
+    ],
+    "rule.groups.security": [
+      "syslog",
+      "sshd",
+      "recon"
+    ],
+    "rule.nist_800_53.security": [
+      "SI.4"
+    ],
+    "event.category.keyword": [
+      "host"
+    ],
+    "rule.category.security": [
+      "Low relevance attack"
+    ],
+    "ecs.version.keyword": [
+      "8.0.0"
+    ],
+    "log.id.id.keyword": [
+      "1682551614.66293"
+    ],
+    "host.name": [
+      "securityonion"
+    ],
+    "rule.tsc": [
+      "CC6.1",
+      "CC6.8",
+      "CC7.2",
+      "CC7.3"
+    ],
+    "rule.name": [
+      "sshd: insecure connection attempt (scan)."
+    ],
+    "decoder.parent": [
+      "sshd"
+    ],
+    "rule.tsc.keyword": [
+      "CC6.1",
+      "CC6.8",
+      "CC7.2",
+      "CC7.3"
+    ],
+    "event.dataset.security": [
+      "alert"
+    ],
+    "log.offset": [
+      9197089
+    ],
+    "rule.tsc.security": [
+      "CC6.1",
+      "CC6.8",
+      "CC7.2",
+      "CC7.3"
+    ],
+    "process.name": [
+      "sshd"
+    ],
+    "process.name.keyword": [
+      "sshd"
+    ],
+    "rule.name.security": [
+      "sshd: insecure connection attempt (scan)."
+    ],
+    "ecs.version": [
+      "8.0.0"
+    ],
+    "rule.mitre.technique.keyword": [
+      "Commonly Used Port"
+    ],
+    "message.keyword": [
+      "{\"timestamp\":\"2023-04-26T23:26:54.416+0000\",\"rule\":{\"level\":6,\"description\":\"sshd: insecure connection attempt (scan).\",\"id\":\"5706\",\"mitre\":{\"id\":[\"T1043\"],\"tactic\":[\"Command and Control\"],\"technique\":[\"Commonly Used Port\"]},\"firedtimes\":1,\"mail\":false,\"groups\":[\"syslog\",\"sshd\",\"recon\"],\"pci_dss\":[\"11.4\"],\"gpg13\":[\"4.12\"],\"gdpr\":[\"IV_35.7.d\"],\"nist_800_53\":[\"SI.4\"],\"tsc\":[\"CC6.1\",\"CC6.8\",\"CC7.2\",\"CC7.3\"]},\"agent\":{\"id\":\"001\",\"name\":\"securityonion\",\"ip\":\"10.0.2.0\"},\"manager\":{\"name\":\"securityonion-wazuh-manager\"},\"id\":\"1682551614.66293\",\"full_log\":\"Apr 26 23:26:53 securityonion sshd[25319]: Did not receive identification string from 10.0.2.20 port 38990\",\"predecoder\":{\"program_name\":\"sshd\",\"timestamp\":\"Apr 26 23:26:53\",\"hostname\":\"securityonion\"},\"decoder\":{\"parent\":\"sshd\",\"name\":\"sshd\"},\"data\":{\"srcip\":\"10.0.2.20\",\"srcport\":\"38990\"},\"location\":\"/var/log/secure\"}"
+    ],
+    "log.full": [
+      "Apr 26 23:26:53 securityonion sshd[25319]: Did not receive identification string from 10.0.2.20 port 38990"
+    ],
+    "event.module.keyword": [
+      "ossec"
+    ],
+    "event.severity_label": [
+      "low"
+    ],
+    "source.ip.keyword": [
+      "10.0.2.20"
+    ],
+    "rule.groups": [
+      "syslog",
+      "sshd",
+      "recon"
+    ],
+    "rule.gdpr": [
+      "IV_35.7.d"
+    ],
+    "rule.pci_dss.keyword": [
+      "11.4"
+    ],
+    "rule.category.keyword": [
+      "Low relevance attack"
+    ],
+    "log.file.path.security": [
+      "/wazuh/archives/archives.json"
+    ],
+    "event.module": [
+      "ossec"
+    ],
+    "rule.mitre.tactic.security": [
+      "Command and Control"
+    ],
+    "event.severity_label.keyword": [
+      "low"
+    ],
+    "agent.id.security": [
+      "001"
+    ],
+    "event.timestamp.keyword": [
+      "2023-04-26T23:26:54.416+0000"
+    ],
+    "rule.gpg13": [
+      "4.12"
+    ],
+    "event.timestamp.security": [
+      "2023-04-26T23:26:54.416+0000"
+    ],
+    "message": [
+      "{\"timestamp\":\"2023-04-26T23:26:54.416+0000\",\"rule\":{\"level\":6,\"description\":\"sshd: insecure connection attempt (scan).\",\"id\":\"5706\",\"mitre\":{\"id\":[\"T1043\"],\"tactic\":[\"Command and Control\"],\"technique\":[\"Commonly Used Port\"]},\"firedtimes\":1,\"mail\":false,\"groups\":[\"syslog\",\"sshd\",\"recon\"],\"pci_dss\":[\"11.4\"],\"gpg13\":[\"4.12\"],\"gdpr\":[\"IV_35.7.d\"],\"nist_800_53\":[\"SI.4\"],\"tsc\":[\"CC6.1\",\"CC6.8\",\"CC7.2\",\"CC7.3\"]},\"agent\":{\"id\":\"001\",\"name\":\"securityonion\",\"ip\":\"10.0.2.0\"},\"manager\":{\"name\":\"securityonion-wazuh-manager\"},\"id\":\"1682551614.66293\",\"full_log\":\"Apr 26 23:26:53 securityonion sshd[25319]: Did not receive identification string from 10.0.2.20 port 38990\",\"predecoder\":{\"program_name\":\"sshd\",\"timestamp\":\"Apr 26 23:26:53\",\"hostname\":\"securityonion\"},\"decoder\":{\"parent\":\"sshd\",\"name\":\"sshd\"},\"data\":{\"srcip\":\"10.0.2.20\",\"srcport\":\"38990\"},\"location\":\"/var/log/secure\"}"
+    ],
+    "rule.pci_dss.security": [
+      "11.4"
+    ],
+    "rule.uuid": [
+      "5706"
+    ],
+    "rule.mail": [
+      false
+    ],
+    "host.name.security": [
+      "securityonion"
+    ],
+    "log.location.keyword": [
+      "/var/log/secure"
+    ],
+    "log.id.id.security": [
+      "1682551614.66293"
+    ],
+    "manager.name.security": [
+      "securityonion-wazuh-manager"
+    ],
+    "rule.mitre.id.keyword": [
+      "T1043"
+    ],
+    "rule.category": [
+      "Low relevance attack"
+    ],
+    "event.dataset": [
+      "alert"
+    ]
+  }
+}

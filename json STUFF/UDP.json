@@ -1,0 +1,458 @@
+{
+  "_index": "securityonion:so-ossec-2023.04.28",
+  "_id": "0DL5x4cBvxc4hmNlfWsp",
+  "_version": 1,
+  "_score": 0,
+  "_source": {
+    "agent": {
+      "ip": "10.0.2.0",
+      "name": "securityonion",
+      "id": "001"
+    },
+    "process": {
+      "name": "sudo"
+    },
+    "manager": {
+      "name": "securityonion-wazuh-manager"
+    },
+    "log": {
+      "file": {
+        "path": "/wazuh/archives/archives.json"
+      },
+      "offset": 909559,
+      "location": "/var/log/secure",
+      "id": {
+        "id": "1682687227.17887"
+      },
+      "full": "Apr 28 13:07:07 securityonion sudo: pam_unix(sudo:session): session opened for user root by silvia(uid=0)"
+    },
+    "rule": {
+      "mail": false,
+      "level": 3,
+      "pci_dss": [
+        "10.2.5"
+      ],
+      "hipaa": [
+        "164.312.b"
+      ],
+      "tsc": [
+        "CC6.8",
+        "CC7.2",
+        "CC7.3"
+      ],
+      "groups": [
+        "pam",
+        "syslog",
+        "authentication_success"
+      ],
+      "nist_800_53": [
+        "AU.14",
+        "AC.7"
+      ],
+      "uuid": "5501",
+      "gdpr": [
+        "IV_32.2"
+      ],
+      "firedtimes": 1,
+      "name": "PAM: Login session opened.",
+      "mitre": {
+        "technique": [
+          "Valid Accounts"
+        ],
+        "id": [
+          "T1078"
+        ],
+        "tactic": [
+          "Defense Evasion",
+          "Initial Access",
+          "Persistence",
+          "Privilege Escalation"
+        ]
+      },
+      "category": "Successful/authorized event",
+      "gpg13": [
+        "7.8",
+        "7.9"
+      ]
+    },
+    "decoder": {
+      "parent": "pam"
+    },
+    "message": "{\"timestamp\":\"2023-04-28T13:07:07.665+0000\",\"rule\":{\"level\":3,\"description\":\"PAM: Login session opened.\",\"id\":\"5501\",\"mitre\":{\"id\":[\"T1078\"],\"tactic\":[\"Defense Evasion\",\"Initial Access\",\"Persistence\",\"Privilege Escalation\"],\"technique\":[\"Valid Accounts\"]},\"firedtimes\":1,\"mail\":false,\"groups\":[\"pam\",\"syslog\",\"authentication_success\"],\"pci_dss\":[\"10.2.5\"],\"gpg13\":[\"7.8\",\"7.9\"],\"gdpr\":[\"IV_32.2\"],\"hipaa\":[\"164.312.b\"],\"nist_800_53\":[\"AU.14\",\"AC.7\"],\"tsc\":[\"CC6.8\",\"CC7.2\",\"CC7.3\"]},\"agent\":{\"id\":\"001\",\"name\":\"securityonion\",\"ip\":\"10.0.2.0\"},\"manager\":{\"name\":\"securityonion-wazuh-manager\"},\"id\":\"1682687227.17887\",\"full_log\":\"Apr 28 13:07:07 securityonion sudo: pam_unix(sudo:session): session opened for user root by silvia(uid=0)\",\"predecoder\":{\"program_name\":\"sudo\",\"timestamp\":\"Apr 28 13:07:07\",\"hostname\":\"securityonion\"},\"decoder\":{\"parent\":\"pam\",\"name\":\"pam\"},\"data\":{\"srcuser\":\"silvia\",\"dstuser\":\"root\",\"uid\":\"0\"},\"location\":\"/var/log/secure\"}",
+    "@timestamp": "2023-04-28T13:07:08.184Z",
+    "ecs": {
+      "version": "8.0.0"
+    },
+    "host": {
+      "name": "securityonion"
+    },
+    "wazuh": {
+      "data": {
+        "srcuser": "silvia",
+        "uid": "0"
+      }
+    },
+    "event": {
+      "severity": 1,
+      "code": "",
+      "module": "ossec",
+      "category": "host",
+      "dataset": "alert",
+      "severity_label": "low",
+      "timestamp": "2023-04-28T13:07:07.665+0000"
+    },
+    "user": {
+      "escalated": "root"
+    }
+  },
+  "fields": {
+    "user.escalated.keyword": [
+      "root"
+    ],
+    "wazuh.data.srcuser": [
+      "silvia"
+    ],
+    "event.category": [
+      "host"
+    ],
+    "host.name.keyword": [
+      "securityonion"
+    ],
+    "rule.nist_800_53": [
+      "AU.14",
+      "AC.7"
+    ],
+    "wazuh.data.uid.security": [
+      "0"
+    ],
+    "event.dataset.keyword": [
+      "alert"
+    ],
+    "event.severity_label.security": [
+      "low"
+    ],
+    "rule.gdpr.keyword": [
+      "IV_32.2"
+    ],
+    "rule.mitre.id": [
+      "T1078"
+    ],
+    "message.security": [
+      "{\"timestamp\":\"2023-04-28T13:07:07.665+0000\",\"rule\":{\"level\":3,\"description\":\"PAM: Login session opened.\",\"id\":\"5501\",\"mitre\":{\"id\":[\"T1078\"],\"tactic\":[\"Defense Evasion\",\"Initial Access\",\"Persistence\",\"Privilege Escalation\"],\"technique\":[\"Valid Accounts\"]},\"firedtimes\":1,\"mail\":false,\"groups\":[\"pam\",\"syslog\",\"authentication_success\"],\"pci_dss\":[\"10.2.5\"],\"gpg13\":[\"7.8\",\"7.9\"],\"gdpr\":[\"IV_32.2\"],\"hipaa\":[\"164.312.b\"],\"nist_800_53\":[\"AU.14\",\"AC.7\"],\"tsc\":[\"CC6.8\",\"CC7.2\",\"CC7.3\"]},\"agent\":{\"id\":\"001\",\"name\":\"securityonion\",\"ip\":\"10.0.2.0\"},\"manager\":{\"name\":\"securityonion-wazuh-manager\"},\"id\":\"1682687227.17887\",\"full_log\":\"Apr 28 13:07:07 securityonion sudo: pam_unix(sudo:session): session opened for user root by silvia(uid=0)\",\"predecoder\":{\"program_name\":\"sudo\",\"timestamp\":\"Apr 28 13:07:07\",\"hostname\":\"securityonion\"},\"decoder\":{\"parent\":\"pam\",\"name\":\"pam\"},\"data\":{\"srcuser\":\"silvia\",\"dstuser\":\"root\",\"uid\":\"0\"},\"location\":\"/var/log/secure\"}"
+    ],
+    "decoder.parent.security": [
+      "pam"
+    ],
+    "process.name.security": [
+      "sudo"
+    ],
+    "agent.name.security": [
+      "securityonion"
+    ],
+    "rule.hipaa.keyword": [
+      "164.312.b"
+    ],
+    "agent.name": [
+      "securityonion"
+    ],
+    "rule.groups.keyword": [
+      "pam",
+      "syslog",
+      "authentication_success"
+    ],
+    "rule.gpg13.security": [
+      "7.8",
+      "7.9"
+    ],
+    "rule.name.keyword": [
+      "PAM: Login session opened."
+    ],
+    "agent.ip": [
+      "10.0.2.0"
+    ],
+    "user.escalated": [
+      "root"
+    ],
+    "rule.mitre.technique": [
+      "Valid Accounts"
+    ],
+    "event.severity": [
+      1
+    ],
+    "rule.mitre.id.security": [
+      "T1078"
+    ],
+    "agent.id.keyword": [
+      "001"
+    ],
+    "event.timestamp": [
+      "2023-04-28T13:07:07.665+0000"
+    ],
+    "event.code": [
+      ""
+    ],
+    "log.id.id": [
+      "1682687227.17887"
+    ],
+    "agent.id": [
+      "001"
+    ],
+    "log.location.security": [
+      "/var/log/secure"
+    ],
+    "rule.hipaa": [
+      "164.312.b"
+    ],
+    "agent.ip.keyword": [
+      "10.0.2.0"
+    ],
+    "rule.mitre.tactic.keyword": [
+      "Defense Evasion",
+      "Initial Access",
+      "Persistence",
+      "Privilege Escalation"
+    ],
+    "rule.nist_800_53.keyword": [
+      "AU.14",
+      "AC.7"
+    ],
+    "event.category.security": [
+      "host"
+    ],
+    "log.full.security": [
+      "Apr 28 13:07:07 securityonion sudo: pam_unix(sudo:session): session opened for user root by silvia(uid=0)"
+    ],
+    "rule.gpg13.keyword": [
+      "7.8",
+      "7.9"
+    ],
+    "manager.name": [
+      "securityonion-wazuh-manager"
+    ],
+    "rule.pci_dss": [
+      "10.2.5"
+    ],
+    "log.location": [
+      "/var/log/secure"
+    ],
+    "rule.uuid.security": [
+      "5501"
+    ],
+    "decoder.parent.keyword": [
+      "pam"
+    ],
+    "ecs.version.security": [
+      "8.0.0"
+    ],
+    "agent.name.keyword": [
+      "securityonion"
+    ],
+    "manager.name.keyword": [
+      "securityonion-wazuh-manager"
+    ],
+    "rule.mitre.tactic": [
+      "Defense Evasion",
+      "Initial Access",
+      "Persistence",
+      "Privilege Escalation"
+    ],
+    "wazuh.data.uid.keyword": [
+      "0"
+    ],
+    "@timestamp": [
+      "2023-04-28T13:07:08.184Z"
+    ],
+    "log.full.keyword": [
+      "Apr 28 13:07:07 securityonion sudo: pam_unix(sudo:session): session opened for user root by silvia(uid=0)"
+    ],
+    "rule.mitre.technique.security": [
+      "Valid Accounts"
+    ],
+    "rule.gdpr.security": [
+      "IV_32.2"
+    ],
+    "log.file.path": [
+      "/wazuh/archives/archives.json"
+    ],
+    "rule.firedtimes": [
+      1
+    ],
+    "rule.level": [
+      3
+    ],
+    "event.module.security": [
+      "ossec"
+    ],
+    "event.code.security": [
+      ""
+    ],
+    "rule.groups.security": [
+      "pam",
+      "syslog",
+      "authentication_success"
+    ],
+    "rule.nist_800_53.security": [
+      "AU.14",
+      "AC.7"
+    ],
+    "event.category.keyword": [
+      "host"
+    ],
+    "rule.category.security": [
+      "Successful/authorized event"
+    ],
+    "rule.hipaa.security": [
+      "164.312.b"
+    ],
+    "user.escalated.security": [
+      "root"
+    ],
+    "ecs.version.keyword": [
+      "8.0.0"
+    ],
+    "log.id.id.keyword": [
+      "1682687227.17887"
+    ],
+    "host.name": [
+      "securityonion"
+    ],
+    "rule.tsc": [
+      "CC6.8",
+      "CC7.2",
+      "CC7.3"
+    ],
+    "decoder.parent": [
+      "pam"
+    ],
+    "rule.name": [
+      "PAM: Login session opened."
+    ],
+    "rule.tsc.keyword": [
+      "CC6.8",
+      "CC7.2",
+      "CC7.3"
+    ],
+    "event.dataset.security": [
+      "alert"
+    ],
+    "log.offset": [
+      909559
+    ],
+    "rule.tsc.security": [
+      "CC6.8",
+      "CC7.2",
+      "CC7.3"
+    ],
+    "process.name": [
+      "sudo"
+    ],
+    "process.name.keyword": [
+      "sudo"
+    ],
+    "rule.name.security": [
+      "PAM: Login session opened."
+    ],
+    "ecs.version": [
+      "8.0.0"
+    ],
+    "rule.mitre.technique.keyword": [
+      "Valid Accounts"
+    ],
+    "log.full": [
+      "Apr 28 13:07:07 securityonion sudo: pam_unix(sudo:session): session opened for user root by silvia(uid=0)"
+    ],
+    "message.keyword": [
+      "{\"timestamp\":\"2023-04-28T13:07:07.665+0000\",\"rule\":{\"level\":3,\"description\":\"PAM: Login session opened.\",\"id\":\"5501\",\"mitre\":{\"id\":[\"T1078\"],\"tactic\":[\"Defense Evasion\",\"Initial Access\",\"Persistence\",\"Privilege Escalation\"],\"technique\":[\"Valid Accounts\"]},\"firedtimes\":1,\"mail\":false,\"groups\":[\"pam\",\"syslog\",\"authentication_success\"],\"pci_dss\":[\"10.2.5\"],\"gpg13\":[\"7.8\",\"7.9\"],\"gdpr\":[\"IV_32.2\"],\"hipaa\":[\"164.312.b\"],\"nist_800_53\":[\"AU.14\",\"AC.7\"],\"tsc\":[\"CC6.8\",\"CC7.2\",\"CC7.3\"]},\"agent\":{\"id\":\"001\",\"name\":\"securityonion\",\"ip\":\"10.0.2.0\"},\"manager\":{\"name\":\"securityonion-wazuh-manager\"},\"id\":\"1682687227.17887\",\"full_log\":\"Apr 28 13:07:07 securityonion sudo: pam_unix(sudo:session): session opened for user root by silvia(uid=0)\",\"predecoder\":{\"program_name\":\"sudo\",\"timestamp\":\"Apr 28 13:07:07\",\"hostname\":\"securityonion\"},\"decoder\":{\"parent\":\"pam\",\"name\":\"pam\"},\"data\":{\"srcuser\":\"silvia\",\"dstuser\":\"root\",\"uid\":\"0\"},\"location\":\"/var/log/secure\"}"
+    ],
+    "wazuh.data.uid": [
+      "0"
+    ],
+    "wazuh.data.srcuser.security": [
+      "silvia"
+    ],
+    "event.module.keyword": [
+      "ossec"
+    ],
+    "event.severity_label": [
+      "low"
+    ],
+    "wazuh.data.srcuser.keyword": [
+      "silvia"
+    ],
+    "rule.groups": [
+      "pam",
+      "syslog",
+      "authentication_success"
+    ],
+    "rule.gdpr": [
+      "IV_32.2"
+    ],
+    "rule.pci_dss.keyword": [
+      "10.2.5"
+    ],
+    "rule.category.keyword": [
+      "Successful/authorized event"
+    ],
+    "log.file.path.security": [
+      "/wazuh/archives/archives.json"
+    ],
+    "event.module": [
+      "ossec"
+    ],
+    "rule.mitre.tactic.security": [
+      "Defense Evasion",
+      "Initial Access",
+      "Persistence",
+      "Privilege Escalation"
+    ],
+    "event.severity_label.keyword": [
+      "low"
+    ],
+    "agent.id.security": [
+      "001"
+    ],
+    "event.timestamp.keyword": [
+      "2023-04-28T13:07:07.665+0000"
+    ],
+    "rule.gpg13": [
+      "7.8",
+      "7.9"
+    ],
+    "event.timestamp.security": [
+      "2023-04-28T13:07:07.665+0000"
+    ],
+    "rule.pci_dss.security": [
+      "10.2.5"
+    ],
+    "message": [
+      "{\"timestamp\":\"2023-04-28T13:07:07.665+0000\",\"rule\":{\"level\":3,\"description\":\"PAM: Login session opened.\",\"id\":\"5501\",\"mitre\":{\"id\":[\"T1078\"],\"tactic\":[\"Defense Evasion\",\"Initial Access\",\"Persistence\",\"Privilege Escalation\"],\"technique\":[\"Valid Accounts\"]},\"firedtimes\":1,\"mail\":false,\"groups\":[\"pam\",\"syslog\",\"authentication_success\"],\"pci_dss\":[\"10.2.5\"],\"gpg13\":[\"7.8\",\"7.9\"],\"gdpr\":[\"IV_32.2\"],\"hipaa\":[\"164.312.b\"],\"nist_800_53\":[\"AU.14\",\"AC.7\"],\"tsc\":[\"CC6.8\",\"CC7.2\",\"CC7.3\"]},\"agent\":{\"id\":\"001\",\"name\":\"securityonion\",\"ip\":\"10.0.2.0\"},\"manager\":{\"name\":\"securityonion-wazuh-manager\"},\"id\":\"1682687227.17887\",\"full_log\":\"Apr 28 13:07:07 securityonion sudo: pam_unix(sudo:session): session opened for user root by silvia(uid=0)\",\"predecoder\":{\"program_name\":\"sudo\",\"timestamp\":\"Apr 28 13:07:07\",\"hostname\":\"securityonion\"},\"decoder\":{\"parent\":\"pam\",\"name\":\"pam\"},\"data\":{\"srcuser\":\"silvia\",\"dstuser\":\"root\",\"uid\":\"0\"},\"location\":\"/var/log/secure\"}"
+    ],
+    "rule.uuid": [
+      "5501"
+    ],
+    "rule.mail": [
+      false
+    ],
+    "host.name.security": [
+      "securityonion"
+    ],
+    "log.location.keyword": [
+      "/var/log/secure"
+    ],
+    "log.id.id.security": [
+      "1682687227.17887"
+    ],
+    "manager.name.security": [
+      "securityonion-wazuh-manager"
+    ],
+    "rule.mitre.id.keyword": [
+      "T1078"
+    ],
+    "rule.category": [
+      "Successful/authorized event"
+    ],
+    "event.dataset": [
+      "alert"
+    ]
+  }
+}
